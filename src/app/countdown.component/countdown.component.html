@@ -1,0 +1,39 @@
+<div class="flex flex-col justify-center items-center h-100 p-4 sm:p-6 md:p-8 shadow-lg rounded-lg">
+  <div class="">
+    <h2 class="text-center text-2xl sm:text-3xl md:text-5xl poppins-500">Em breve...</h2>
+  </div>
+
+  <div class="countdown flex flex-wrap justify-center items-center gap-1.5 sm:gap-6 md:gap-10 lg:gap-16 mt-8 sm:mt-12 md:mt-20 mb-8 sm:mb-12 md:mb-20 text-center">
+
+    <!-- Dias -->
+    <div class="flex flex-col items-center">
+      <span class="text-4xl sm:text-6xl md:text-8xl">{{ pad(days) }}</span>
+      <span class="text-lg sm:text-2xl md:text-3xl">Dias</span>
+    </div>
+
+    <span class="text-xl sm:text-2xl md:text-4xl">:</span>
+
+    <!-- Horas -->
+    <div class="flex flex-col items-center">
+      <span class="text-4xl sm:text-6xl md:text-8xl">{{ pad(hours) }}</span>
+      <span class="text-lg sm:text-2xl md:text-3xl">Horas</span>
+    </div>
+
+    <span class="text-xl sm:text-2xl md:text-4xl">:</span>
+
+    <!-- Minutos -->
+    <div class="flex flex-col items-center">
+      <span class="text-4xl sm:text-6xl md:text-8xl">{{ pad(minutes) }}</span>
+      <span class="text-lg sm:text-2xl md:text-3xl">Minutos</span>
+    </div>
+
+    <span class="text-xl sm:text-2xl md:text-4xl">:</span>
+
+    <!-- Segundos -->
+    <div class="flex flex-col items-center">
+      <span class="text-4xl sm:text-6xl md:text-8xl">{{ pad(seconds) }}</span>
+      <span class="text-lg sm:text-2xl md:text-3xl">Segundos</span>
+    </div>
+
+  </div>
+</div>

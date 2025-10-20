@@ -1,0 +1,26 @@
+.custom-card-bg {
+  background-color: transparent !important;
+  box-shadow: none; /* remove sombra se quiser também */
+}
+
+.button-next {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #BA005C;
+  border-radius: 20px;
+  color: #fff;
+  transition: all;
+}
+
+.button-next:hover {
+  background-color: #c61b71;
+  cursor: pointer;
+  transition: all;
+}
+
+#exposicoes {
+  scroll-margin-top: 100px;
+}

@@ -1,0 +1,8 @@
+mat-card {
+    background: transparent !important; 
+    box-shadow: none;
+}
+
+#sobre-evento {
+  scroll-margin-top: 100px;
+}

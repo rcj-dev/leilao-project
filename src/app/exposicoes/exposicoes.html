@@ -1,0 +1,55 @@
+<div class="flex flex-col items-center justify-center w-full lg:h-180 h-130 md:h-160" id="exposicoes">
+  <mat-card class=" w-full sm:w-11/12 md:w-10/12 lg:w-10/12 flex flex-col gap-3 custom-card-bg">
+  
+    <mat-card-header class="text-left">
+      <mat-card-title class="!text-3xl sm:!text-4xl md:!text-5xl lg:!text-6xl">
+        <span class="poppins-600">Confira nossas obras</span>
+      </mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+    <p class="poppins-300 text-[22px] sm:text-1x1 md:text-2xl lg:text-3xl flex flex-col gap-7 text-left leading-7 lg:leading-12">
+        <span>
+          Veja algumas das obras para esta edição do leilão. Arte, talento e sensibilidade em cada detalhe.
+        </span>
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="flex flex-row w-full justify-center items-center lg:h-220 md:h-220 sm:h-120 h-90 gap-0 p-4 md:p-8">
+
+    <button class="button-next text-3xl md:text-4xl button-next" (click)="prev()" [disabled]="currentIndex === 0">‹</button>
+
+    <div class="flex justify-center items-center lg:gap-35 md:gap-5 w-full h-auto flex-wrap md:flex-nowrap">
+
+      <div *ngFor="let art of getVisibleArts()" (click)="openArtDetails(art)" class="flex flex-col w-[230px] sm:w-[350px] md:w-[250px] lg:w-[340px] rounded-2xl bg-[#ffeded] cursor-pointer hover:scale-105 transition-transform duration-300">
+
+        <img [src]="art.imagem" [alt]="art.lote" class="w-full object-cover rounded-2xl">
+
+        <div class="flex flex-col gap-1 md:gap-2 mt-4 text-base md:text-xl leading-tight md:leading-8 p-3">
+          <p class="text-lg md:text-2xl poppins-600">{{ art.lote }}</p>
+          <p class="hidden sm:block">{{ art.artista }}</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button class="button-next text-3xl md:text-4xl button-next" (click)="next()" [disabled]="currentIndex + itemsPerPage >= arts.length">›</button>
+  </div>
+
+  <div *ngIf="selectedArt" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-6" (click)="closeArtDetails()">
+
+    <div class="bg-white rounded-2xl p-6 md:p-10 max-w-md w-full shadow-2xl relative" (click)="$event.stopPropagation()">
+      <button class="absolute top-3 right-3 text-gray-600 text-3xl hover:text-black" (click)="closeArtDetails()">×</button>
+
+      <img [src]="selectedArt.imagem" [alt]="selectedArt.lote" class="rounded-2xl w-full mb-4">
+      <h2 class="text-2xl font-semibold mb-2">{{ selectedArt.lote }}</h2>
+      <p><strong>Artista:</strong> {{ selectedArt.artista }}</p>
+      <p><strong>Dimensões:</strong> {{ selectedArt.dimensoes }}</p>
+      <p><strong>Técnica:</strong> {{ selectedArt.tecnica }}</p>
+      <p><strong>Ano:</strong> {{ selectedArt.ano }}</p>
+      <p><strong>Doação:</strong> {{ selectedArt.doacao }}</p>
+    </div>
+  </div>
+
