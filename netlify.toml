@@ -2,5 +2,5 @@
   command = "ng build --configuration=production"
   publish = "dist/website-leilao/browser"
 
-[plugins]
+[[plugins]]
   package = "@netlify/angular-runtime"
