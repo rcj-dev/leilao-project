@@ -1,3 +1,8 @@
+# netlify.toml - Angular 20
+
 [build]
   command = "ng build --configuration production"
   publish = "dist/website-leilao"
+
+[build.environment]
+  NODE_VERSION = "20"
