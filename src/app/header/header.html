@@ -1,26 +1,24 @@
-<header
-  class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-8 md:px-0 lg:px-20 py-3 pt-4 md:ml-2 md:mr-2 pb-4 bg-white/10 backdrop-blur-md"
->
-  <!-- Logo -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-8 md:px-0 lg:px-20 py-3 pt-4 md:ml-2 md:mr-2 pb-4 bg-white/10 backdrop-blur-md">
   <a href="#inicio" class="cursor-pointer">
     <img src="assets/img/Logo.png" alt="Logo" class="w-50 md:w-44 lg:w-50">
   </a>
 
-  <!-- Menu web -->
   <ul class="hidden md:flex lg:gap-5 md:gap-0 sm:gap-1 items-center">
     <li><button mat-button class="!text-lg font-semibold"><a href="#inicio">Início</a></button></li>
     <li><button mat-button class="!text-lg font-semibold"><a href="#sobre-evento">Sobre o evento</a></button></li>
-    <li><button mat-flat-button class="!text-lg font-semibold"><a href="#exposicoes">Ver obras disponíveis</a></button></li>
+    <li>
+      <a href="#exposicoes">
+        <button mat-flat-button class="!text-lg font-semibold">Ver obras disponíveis</button>        
+      </a>
+    </li>
   </ul>
 
-  <!-- Botão do menu mobile -->
   <div class="md:hidden">
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
 
-  <!-- Itens do menu (mobile) -->
   <mat-menu #menu="matMenu">
     <button mat-menu-item><a href="#inicio">Início</a></button>
     <button mat-menu-item><a href="#sobre-evento">Sobre o evento</a></button>
@@ -28,5 +26,4 @@
   </mat-menu>
 </header>
 
-<!-- Espaço para compensar o header fixo -->
 <div class="h-24"></div>
