@@ -7,6 +7,7 @@ import { SobreEvento } from './sobre-evento/sobre-evento';
 import { Contato } from './contato/contato';
 import { Footer } from './footer/footer';
 import { Exposicoes } from './exposicoes/exposicoes';
+import { Critico } from './critico/critico'
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { Exposicoes } from './exposicoes/exposicoes';
     SobreEvento,
     Contato,
     Footer,
-    Exposicoes
+    Exposicoes,
+    Critico
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

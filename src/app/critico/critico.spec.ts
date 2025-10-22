@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CountdownComponent } from './countdown.component';
 
-describe('CountdownComponent', () => {
-  let component: CountdownComponent;
-  let fixture: ComponentFixture<CountdownComponent>;
+import { Critico } from './critico';
+
+describe('Critico', () => {
+  let component: Critico;
+  let fixture: ComponentFixture<Critico>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CountdownComponent]
+      imports: [Critico]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CountdownComponent);
+    fixture = TestBed.createComponent(Critico);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
