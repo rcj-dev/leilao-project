@@ -1,4 +1,4 @@
-<div class="flex flex-col items-center justify-center w-full lg:h-180 h-130 md:h-160 px-4 sm:px-6 md:px-10 mt-8 lg:mt-0" id="exposicoes">
+<div class="flex flex-col items-center justify-center w-full lg:h-180 h-130 md:h-160 px-4 sm:px-6 md:px-10 mt-20 lg:mt-0" id="exposicoes">
   <mat-card class="w-full sm:w-11/12 md:w-10/12 lg:w-10/12 flex flex-col gap-3 custom-card-bg">
   
     <mat-card-header class="text-left">
@@ -27,7 +27,7 @@
           (click)="baixarArquivo()"
           mat-flat-button
           color="primary"
-          class="!text-lg transition-all w-full"
+          class="!text-lg transition-all md:w-90 sm:w-full lg:w-90 w-full"
           >
           Baixe o nosso catálogo
         </button>
@@ -57,6 +57,16 @@
 
     <button class="button-next text-3xl md:text-4xl button-next" (click)="next()" [disabled]="currentIndex + itemsPerPage >= arts.length">›</button>
   </div>
+
+  <a class="!mt-15" target="_blank" href="https://gustavoamorim.smugmug.com/Publicidade/n-Vx9s7b/Artes-Gabriel">
+        <button
+          mat-flat-button
+          color="primary"
+          class="!text-lg transition-all w-full"
+          >
+          Acessar coleção completa
+        </button>
+      </a>
 
   <div *ngIf="selectedArt" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-6" (click)="closeArtDetails()">
 
