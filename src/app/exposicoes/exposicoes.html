@@ -1,5 +1,5 @@
-<div class="flex flex-col items-center justify-center w-full lg:h-180 h-130 md:h-160" id="exposicoes">
-  <mat-card class=" w-full sm:w-11/12 md:w-10/12 lg:w-10/12 flex flex-col gap-3 custom-card-bg">
+<div class="flex flex-col items-center justify-center w-full lg:h-180 h-130 md:h-160 px-4 sm:px-6 md:px-10 mt-8 lg:mt-0" id="exposicoes">
+  <mat-card class="w-full sm:w-11/12 md:w-10/12 lg:w-10/12 flex flex-col gap-3 custom-card-bg">
   
     <mat-card-header class="text-left">
       <mat-card-title class="!text-3xl sm:!text-4xl md:!text-5xl lg:!text-6xl">
@@ -13,14 +13,34 @@
           Veja algumas das obras para esta edição do leilão. Arte, talento e sensibilidade em cada detalhe.
         </span>
       </p>
+          <p class="poppins-300 text-[22px] sm:text-1x1 md:text-2xl lg:text-3xl flex flex-col gap-7 text-left leading-7 lg:leading-12">
+        <span>
+          Baixe nosso catálogo e tenha acesso a todas as informações e obras do nosso leilão.
+        </span>
+      </p>
     </mat-card-content>
+
+    <mat-card-footer class="flex sm:items-center-last md:text-left mb-15 mt-5">
+
+      <a>
+        <button
+          (click)="baixarArquivo()"
+          mat-flat-button
+          color="primary"
+          class="!text-lg transition-all w-full"
+          >
+          Baixe o nosso catálogo
+        </button>
+      </a>
+
+    </mat-card-footer>
   </mat-card>
 
   <div class="flex flex-row w-full justify-center items-center lg:h-220 md:h-220 sm:h-120 h-90 gap-0 p-4 md:p-8">
 
     <button class="button-next text-3xl md:text-4xl button-next" (click)="prev()" [disabled]="currentIndex === 0">‹</button>
 
-    <div class="flex justify-center items-center lg:gap-35 md:gap-5 w-full h-auto flex-wrap md:flex-nowrap">
+    <div class="flex justify-center items-center lg:gap-35 md:gap-5 w-full h-100 flex-wrap md:flex-nowrap">
 
       <div *ngFor="let art of getVisibleArts()" (click)="openArtDetails(art)" class="flex flex-col w-[230px] sm:w-[350px] md:w-[250px] lg:w-[340px] rounded-2xl bg-[#ffeded] cursor-pointer hover:scale-105 transition-transform duration-300">
 

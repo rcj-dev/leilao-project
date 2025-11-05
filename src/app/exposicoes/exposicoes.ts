@@ -21,6 +21,13 @@ interface ArtItem {
   imports: [MatCardModule, MatButtonModule, CommonModule]
 })
 export class Exposicoes {
+  
+baixarArquivo() {
+  const link = document.createElement('a');
+  link.href = 'CatalogoLeilaoETH.pdf';
+  link.download = 'CatalogoLeilaoETH.pdf';
+  link.click();
+}
   currentIndex = 0;
   itemsPerPage = 2;
 
